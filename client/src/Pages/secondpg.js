@@ -3,7 +3,7 @@ import './secondpg.css'
 import React, { useState } from 'react';
 import axios from 'axios';
 import LabelComponent from '../Component/LabelComponent';
-import Button from '../Component/button';
+// import Button from '../Component/button';
 import { useNavigate } from 'react-router-dom';
 
 function SecondPg() {

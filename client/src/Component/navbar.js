@@ -15,9 +15,6 @@ export default function Navbar(){
                 <li>Contact Us</li>
                
             </ul>
-            <div className='nav-login'>
-                Login
-            </div>
         </div>
     );
 }
