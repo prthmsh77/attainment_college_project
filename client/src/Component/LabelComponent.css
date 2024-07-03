@@ -1,0 +1,74 @@
+
+  
+.inp {
+    position: relative;
+    /* margin: auto; */
+    width: 100%;
+    /* height: 20%; */
+    max-width: 25vw;
+    border-radius: 0.1vw;
+    overflow: hidden;
+  }
+  
+  .inp .label {
+    position: absolute;
+    top:0;
+    left: 0.5vw;
+    font-size: 1.1vw;  
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  
+  .inp .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100%; */
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin:top;
+  }
+  
+  .inp input {
+    
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    padding: 0vw 1vw 0 1vw;
+    line-height: 3.5vw;
+    font-size: 1.1vw;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02); 
+    box-shadow: inset 0 -0.052vw 0 rgba(0, 0, 0, 0.3); 
+    transition: all 0.15s ease;
+  }
+  
+  .inp input:not(:placeholder-shown) + .label {
+    color: rgba(0, 0, 0, 0.5); 
+    /* font-size: 1vw; */
+    transform: translate3d(0, -0.1vw, 0) scale(0.75);
+  }
+  
+  .inp input:focus {
+    background: rgba(0, 0, 0, 0.05); 
+    outline: none;
+    box-shadow: inset 0 -0.104vw 0 #0077FF; 
+  
+    + .label {
+      color: #0077FF; 
+      transform: translate3d(0, -0.1vw, 0) scale(1);
+    }
+  
+    + .label + .focus-bg {
+      transform: scaleX(1);
+      transition: all 0.1s ease;
+    }
+  }
+  
