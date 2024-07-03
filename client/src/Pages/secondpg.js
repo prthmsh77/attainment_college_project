@@ -61,9 +61,9 @@ function SecondPg() {
 
                 <div className='input-button'>
                     <div className='marksinput'>
-                    <LabelComponent/>
-                    <LabelComponent/>
-                    <LabelComponent/>
+                    <LabelComponent headline='Unit1 Marks'/>
+                    <LabelComponent headline='Unit2 Marks'/>
+                    <LabelComponent headline='Prelims Marks'/>
                     </div>
                     
                     <div className='secondpg-firstpg-buttons'>

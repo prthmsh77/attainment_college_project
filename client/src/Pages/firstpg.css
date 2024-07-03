@@ -1,7 +1,7 @@
 .firstpg {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    /* position: fixed; */
     /* background-color: #e6f6fe; */
     /* position: relative;  */
 }
@@ -10,12 +10,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     width: 100%; 
-    height: 67%; 
-    gap: 2.5vw;
+    height: 100%; 
+    /* gap: 2.5vw; */
     border-radius: 0 0 1.9vw 1.9vw;
     background: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    /* justify-content: center; */
     /* background: linear-gradient(65.5deg, rgb(23, 205, 205) -15.1%, rgb(23, 25, 95) 71.5%);  */
     /* background: linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%); */
 }

@@ -2,6 +2,7 @@
 import React from 'react'
 import './firstpg.css'
 import Button from '../Component/button';
+import Table from '../Component/table';
 import Navbar from '../Component/navbar';
 import { useNavigate } from 'react-router-dom';
 const FirstPg=()=>{
@@ -19,7 +20,11 @@ const FirstPg=()=>{
                 <div className='firstpg-buttons'>
                 <Button Title='Attainment' onclick={()=>{navigate('secondpg')}}/>
                 </div>
+                <div>
+                    <Table/>
+                </div>
             </div>
+            
         </div>
     );
 }
