@@ -24,6 +24,9 @@ def process_marks(input_file):
         students_51_60 = len(df[(percentage >= 51) & (percentage < 61)])
         students_61_70 = len(df[(percentage >= 61) & (percentage < 71)])
         students_above_71 = len(df[percentage >= 71])
+        print(column)
+        print(percentage)
+        print("-------------------------------")
         return students_below_51, students_51_60, students_61_70, students_above_71
 
     results = {}
@@ -35,6 +38,8 @@ def process_marks(input_file):
 
     for column, total in columns_and_totals.items():
         if column in df.columns:
+            print(column+":")
+            print(calculate_statistics(column, total))
             results[column] = calculate_statistics(column, total)
 
     total_students = len(df)
@@ -45,7 +50,7 @@ def process_marks(input_file):
             attainment[column] = ((0 * results[column][0]) + (1 * results[column][1]) + (2 * results[column][2]) + (3 * results[column][3])) / total_students
         else:
             attainment[column] = None
-
+    print(df)
     return {
         "CO1_UT": attainment['CO1_UT'],
         "CO2_UT": attainment['CO2_UT'],

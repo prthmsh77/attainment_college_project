@@ -1,6 +1,7 @@
 .firstpg {
     width: 100vw;
     height: 100vh;
+    position: fixed;
     /* background-color: #e6f6fe; */
     /* position: relative;  */
 }

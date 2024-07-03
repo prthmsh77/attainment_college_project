@@ -1,9 +1,8 @@
 import Navbar from '../Component/navbar';
-import './secondpg.css'
+import './secondpg.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import LabelComponent from '../Component/LabelComponent';
-import Button from '../Component/button';
 import { useNavigate } from 'react-router-dom';
 
 function SecondPg() {
@@ -42,10 +41,9 @@ function SecondPg() {
                 <Navbar />
             </div>
             <div className='second-page-containt'>
-            <form onSubmit={handleSubmit}>
                 <div className='upload'>
-                    
-                <label htmlFor="file" className="drop-container" id="dropcontainer">
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="file" className="drop-container" id="dropcontainer">
                             <span className="drop-title">Drop files here</span>
                             or
                             <input 
@@ -56,28 +54,25 @@ function SecondPg() {
                                 required 
                             />
                         </label>
-                   
-                </div>
+                       
 
                 <div className='input-button'>
                     <div className='marksinput'>
-                    <LabelComponent/>
-                    <LabelComponent/>
-                    <LabelComponent/>
+                        <LabelComponent />
+                        <LabelComponent />
+                        <LabelComponent />
                     </div>
-                    
-                    <div className='secondpg-firstpg-buttons'>
-                        <button type='submit' className='btn'>Submit</button>
-                    </div>
+                    <button type='submit' className='btn'>Submit</button> 
                 </div>
-            </form>   
-            </div>
-            {responseData && (
+                </form>
+                </div>
+
+                {responseData && (
                     <div className='response-table'>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>CO</th>
+                                    <th>Parameter</th>
                                     <th>Value</th>
                                 </tr>
                             </thead>
@@ -92,7 +87,9 @@ function SecondPg() {
                         </table>
                     </div>
                 )}
+            </div>
         </div>
     );
 }
+
 export default SecondPg;
